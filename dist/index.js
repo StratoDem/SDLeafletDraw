@@ -1,25 +1,18 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+var _leaflet = require('leaflet');
+
+var _leaflet2 = _interopRequireDefault(_leaflet);
 
 var _Control = require('./Control.Draw');
 
-Object.defineProperty(exports, 'ControlDraw', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Control).default;
-  }
-});
+var _Control2 = _interopRequireDefault(_Control);
 
 var _Event = require('./Event');
 
-Object.defineProperty(exports, 'Event', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_Event).default;
-  }
-});
+var _Event2 = _interopRequireDefault(_Event);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_leaflet2.default.Control.Draw = _Control2.default;
+_leaflet2.default.Draw = { Event: _Event2.default };
