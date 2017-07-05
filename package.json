@@ -1,0 +1,75 @@
+{
+  "name": "sdleafletdraw",
+  "version": "1.0.0",
+  "description": "ES6 + Babel port of Leaflet.draw, a plugin that adds drawing and editing tools to Leaflet powered maps. (c) 2012-2017, Jacob Toye, Jon West, Smartrak, Leaflet https://github.com/Leaflet/Leaflet.draw http://leafletjs.com",
+  "main": "index.js",
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "dependencies": {
+    "leaflet": "^1.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^20.0.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-plugin-flowtype": "^2.34.1",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-jsx-a11y": "^5.1.0",
+    "eslint-plugin-react": "^7.0.1",
+    "flow-bin": "^0.49.1",
+    "flow-remove-types": "1.2.1",
+    "jest": "^20.0.4",
+    "jest-cli": "*"
+  },
+  "scripts": {
+    "build": "babel src/es6 --out-dir dist --no-comments",
+    "test": "jest --verbose --runInBand",
+    "version_patch": "npm version patch",
+    "_publish": "npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StratoDem/SDLeafletDraw.git"
+  },
+  "keywords": [
+    "leaflet"
+  ],
+  "jest": {
+    "modulePaths": [
+      "/shared/vendor/modules",
+      "<rootDir>src/js"
+    ],
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "bower_components",
+      "shared"
+    ],
+    "testRegex": "\\.test\\.js$",
+    "setupFiles": [
+      "<rootDir>src/js/_test-env.js"
+    ]
+  },
+  "author": "StratoDem Analytics tech@stratodem.com",
+  "contributors": [
+    {
+      "name": "Michael Clawar"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StratoDem/SDLeafletDraw/issues"
+  },
+  "homepage": "https://github.com/StratoDem/SDLeafletDraw#readme"
+}
