@@ -20,6 +20,10 @@ import 'sdleafletdraw/dist/leaflet.draw.css';
 
 #### Create a new `L.Control.Draw` and add to an `L.Map`
 ```
+const map = new L.Map('map');
+const editableLayers = new L.FeatureGroup();
+map.addLayer(editableLayers);
+
 const drawControl = new L.Control.Draw({
     draw: {
         polyline: false,
@@ -41,7 +45,17 @@ const drawControl = new L.Control.Draw({
     position: 'topleft',
     allowIntersection: false,
     edit: {
-        featureGroup: L.featureGroup(),  // A leaflet featureGroup
+        featureGroup: editableLayers,  // A leaflet featureGroup
     }
+});
+map.addControl(drawControl);
+
+map.on(L.Draw.Event.CREATED, (event) => {
+    const { layerType, layer } = event;
+
+    if (layerType === 'marker')
+        layer.bindPopup('A popup!');
+
+    editableLayers.addLayer(layer);
 });
 ```
