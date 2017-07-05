@@ -31,7 +31,7 @@
     "jest-cli": "*"
   },
   "scripts": {
-    "build": "babel src/es6 --out-dir dist --no-comments",
+    "build": "babel src/es6 --out-dir dist --no-comments && cp src/es6/leaflet.draw.css dist/",
     "test": "jest --verbose --runInBand",
     "version_patch": "npm version patch",
     "_publish": "npm publish"
