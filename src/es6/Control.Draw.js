@@ -36,7 +36,7 @@ export default class DrawControl extends L.Control {
         + 'Download latest from https://github.com/Leaflet/Leaflet/');
     }
 
-    super.initialize(this, {...DrawControl.options, ...options});
+    super.initialize({...DrawControl.options, ...options});
     this._toolbars = {};
 
     // Initialize toolbars

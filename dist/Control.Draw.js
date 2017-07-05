@@ -67,7 +67,7 @@ var DrawControl = function (_L$Control) {
         throw new Error('Leaflet.draw 0.2.3+ requires Leaflet 0.7.0+. ' + 'Download latest from https://github.com/Leaflet/Leaflet/');
       }
 
-      (0, _get3.default)(DrawControl.prototype.__proto__ || Object.getPrototypeOf(DrawControl.prototype), 'initialize', this).call(this, this, (0, _extends3.default)({}, DrawControl.options, options));
+      (0, _get3.default)(DrawControl.prototype.__proto__ || Object.getPrototypeOf(DrawControl.prototype), 'initialize', this).call(this, (0, _extends3.default)({}, DrawControl.options, options));
       this._toolbars = {};
 
       if (_DrawToolbar2.default && this.options.draw) {
