@@ -11,7 +11,7 @@ $ npm install sdleafletdraw
 ```
 
 #### Importing `sdleafletdraw`
-```
+```js
 import L from 'leaflet';
 import 'sdleafletdraw';
 // Include the css files
@@ -19,7 +19,7 @@ import 'sdleafletdraw/dist/leaflet.draw.css';
 ```
 
 #### Create a new `L.Control.Draw` and add to an `L.Map`
-```
+```js
 const map = new L.Map('map');
 const editableLayers = new L.FeatureGroup();
 map.addLayer(editableLayers);
