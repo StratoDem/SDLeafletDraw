@@ -8,7 +8,5 @@
  *  All Rights Reserved
  */
 
-import ControlDraw from './Control.Draw';
-import Event from './Event';
-
-export { ControlDraw, Event };
+export { default as ControlDraw } from './Control.Draw';
+export { default as Event } from './Event';
