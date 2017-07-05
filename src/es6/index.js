@@ -8,5 +8,10 @@
  *  All Rights Reserved
  */
 
-export { default as ControlDraw } from './Control.Draw';
-export { default as Event } from './Event';
+import L from 'leaflet';
+
+import DrawControl from './Control.Draw';
+import Event from './Event';
+
+L.Control.Draw = DrawControl;
+L.Draw = {Event};
