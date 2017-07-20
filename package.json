@@ -33,8 +33,8 @@
   "scripts": {
     "build": "babel src/es6 --out-dir dist --no-comments && cp src/es6/leaflet.draw.css dist/ && cp -R src/es6/images dist",
     "test": "jest --verbose --runInBand",
-    "version_patch": "npm version patch",
-    "_publish": "npm publish"
+    "version_patch": "npm run version patch",
+    "_publish": "npm run publish"
   },
   "repository": {
     "type": "git",

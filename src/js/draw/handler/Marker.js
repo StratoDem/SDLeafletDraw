@@ -71,9 +71,9 @@ var Marker = function (_Feature) {
   (0, _createClass3.default)(Marker, [{
     key: 'initialize',
     value: function initialize(map, options) {
+      (0, _get3.default)(Marker.prototype.__proto__ || Object.getPrototypeOf(Marker.prototype), 'initialize', this).call(this, map, (0, _extends3.default)({}, Marker.options, options));
       // Save the type so super can fire, need to do this as cannot do this.TYPE :(
       this.type = Marker.TYPE;
-      (0, _get3.default)(Marker.prototype.__proto__ || Object.getPrototypeOf(Marker.prototype), 'initialize', this).call(this, map, (0, _extends3.default)({}, Marker.options, options));
     }
 
     /** Add listener hooks to this handler **/
@@ -176,7 +176,7 @@ var Marker = function (_Feature) {
 }(_Feature3.default);
 
 Marker.options = DEFAULT_MARKER_OPTIONS;
-Marker.type = _constants.TYPE_MARKER;
+Marker.TYPE = _constants.TYPE_MARKER;
 exports.default = Marker;
 
 //# sourceMappingURL=Marker.js.map
