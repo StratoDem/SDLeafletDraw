@@ -30,12 +30,12 @@ const DEFAULT_MARKER_OPTIONS: T_MARKER_OPTIONS = {
 
 export default class Marker extends Feature {
   static options = DEFAULT_MARKER_OPTIONS;
-  static type = TYPE_MARKER;
+  static TYPE = TYPE_MARKER;
 
   initialize(map: L.Map, options: T_MARKER_OPTIONS) {
+    super.initialize(map, {...Marker.options, ...options});
     // Save the type so super can fire, need to do this as cannot do this.TYPE :(
     this.type = Marker.TYPE;
-    super.initialize(map, {...Marker.options, ...options});
   }
 
   /** Add listener hooks to this handler **/

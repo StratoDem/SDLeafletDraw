@@ -122,7 +122,7 @@ var BaseToolbar = function (_L$Class) {
     }
   }, {
     key: '_initModeHandler',
-    value: function _initModeHandler(handler, container, buttonIndex, classNamePredix, buttonTitle) {
+    value: function _initModeHandler(handler, container, buttonIndex, classNamePrefix, buttonTitle) {
       var type = handler.type;
 
       var modeHandler = {
@@ -130,7 +130,7 @@ var BaseToolbar = function (_L$Class) {
         button: BaseToolbar._createButton({
           type: type,
           title: buttonTitle,
-          className: classNamePredix + '-' + type,
+          className: classNamePrefix + '-' + type,
           container: container,
           callback: handler.enable,
           context: handler

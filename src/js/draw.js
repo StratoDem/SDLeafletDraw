@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _index = require('./ext/index');
+require('./ext');
 
 var drawLocal = {
   draw: {

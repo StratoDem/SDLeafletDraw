@@ -97,7 +97,7 @@ class BaseToolbar extends L.Class {
   }
 
   _initModeHandler(handler: Object, container: L.DomUtil,
-                   buttonIndex: number, classNamePredix: string, buttonTitle: string): void {
+                   buttonIndex: number, classNamePrefix: string, buttonTitle: string): void {
     const type = handler.type;
 
     const modeHandler = {
@@ -105,7 +105,7 @@ class BaseToolbar extends L.Class {
       button: BaseToolbar._createButton({
         type,
         title: buttonTitle,
-        className: `${classNamePredix}-${type}`,
+        className: `${classNamePrefix}-${type}`,
         container,
         callback: handler.enable,
         context: handler,

@@ -8,7 +8,7 @@
  *  All Rights Reserved
  */
 
-import { PolylineIntersect, PolygonIntersect } from './ext/index';
+import './ext';
 
 
 const drawLocal = {
