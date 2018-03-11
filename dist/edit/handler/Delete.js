@@ -183,5 +183,5 @@ var BaseDelete = function (_L$Handler) {
 BaseDelete.TYPE = _constants.TYPE_REMOVE;
 
 
-var Delete = BaseDelete.include(_leaflet2.default.Evented.prototype);
+var Delete = BaseDelete.extend({ includes: _leaflet2.default.Evented.prototype });
 exports.default = Delete;
