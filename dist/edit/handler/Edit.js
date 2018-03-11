@@ -290,5 +290,5 @@ var BaseEdit = function (_L$Handler) {
 BaseEdit.TYPE = _constants.TYPE_EDIT;
 
 
-var Edit = BaseEdit.extend({ includes: _leaflet2.default.Evented.prototype });
+var Edit = BaseEdit.include(_leaflet2.default.Evented.prototype);
 exports.default = Edit;

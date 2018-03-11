@@ -45,7 +45,7 @@ class BaseFeature extends L.Handler {
     this.fire('disabled', { handler: this.type });
   }
 
-  /** Adds event listeners to this handler **/
+  /** Adds event listeners to this handler */
   addHooks(): void {
     if (this._map) {
       L.DomUtil.disableTextSelection();
@@ -58,7 +58,7 @@ class BaseFeature extends L.Handler {
     }
   }
 
-  /** Removes event listeners from this handler **/
+  /** Removes event listeners from this handler */
   removeHooks(): void {
     if (this._map) {
       L.DomUtil.enableTextSelection();
@@ -70,7 +70,7 @@ class BaseFeature extends L.Handler {
     }
   }
 
-  /** Sets new options to this handler **/
+  /** Sets new options to this handler */
   setOptions(options: Object): void {
     L.setOptions(this, options);
   }
@@ -79,7 +79,7 @@ class BaseFeature extends L.Handler {
     this._map.fire(Event.CREATED, { layer, layerType: this.type });
   }
 
-  /** Cancel the drawing when the escape key is pressed **/
+  /** Cancel the drawing when the escape key is pressed */
   _cancelDrawing(event: {keyCode: number}): void {
     this._map.fire('draw:canceled', { layerType: this.type });
     if (event.keyCode === 27) {
@@ -88,5 +88,5 @@ class BaseFeature extends L.Handler {
   }
 }
 
-const Feature = BaseFeature.extend({includes: L.Evented.prototype});
+const Feature = BaseFeature.include(L.Evented.prototype);
 export default Feature;

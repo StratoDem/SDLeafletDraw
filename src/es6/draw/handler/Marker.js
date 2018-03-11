@@ -25,7 +25,7 @@ type T_MARKER_OPTIONS = {
 const DEFAULT_MARKER_OPTIONS: T_MARKER_OPTIONS = {
   icon: new L.Icon.Default(),
   repeatMode: false,
-  zIndexOffset: 2000,  // This should be > than the highest z-index any markers
+  zIndexOffset: 2000, // This should be > than the highest z-index any markers
 };
 
 export default class Marker extends Feature {
@@ -38,7 +38,7 @@ export default class Marker extends Feature {
     this.type = Marker.TYPE;
   }
 
-  /** Add listener hooks to this handler **/
+  /** Add listener hooks to this handler */
   addHooks(): void {
     super.addHooks();
 
@@ -67,7 +67,7 @@ export default class Marker extends Feature {
     }
   }
 
-  /** Remove listener hooks from this handler **/
+  /** Remove listener hooks from this handler */
   removeHooks(): void {
     super.removeHooks();
 
@@ -118,10 +118,10 @@ export default class Marker extends Feature {
       this.enable();
   }
 
-  /** Handle touch event **/
+  /** Handle touch event */
   _onTouch(event: {latlng: L.LatLng}): void {
-    this._onMouseMove(event);   // Creates & places marker
-    this._onClick();            // Permanently places marker and ends interaction
+    this._onMouseMove(event); // Creates & places marker
+    this._onClick(); // Permanently places marker and ends interaction
   }
 
   _fireCreatedEvent(): void {

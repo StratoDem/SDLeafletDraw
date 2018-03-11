@@ -38,7 +38,7 @@ class BaseDelete extends L.Handler {
     this.type = BaseDelete.TYPE;
   }
 
-  /** Enable the delete toolbar **/
+  /** Enable the delete toolbar */
   enable(): void {
     if (this._enabled || !this._hasAvailableLayers()) {
       return;
@@ -54,7 +54,7 @@ class BaseDelete extends L.Handler {
       .on('layerremove', this._disableLayerDelete, this);
   }
 
-  /** Disable the delete toolbar **/
+  /** Disable the delete toolbar */
   disable(): void {
     if (!this._enabled)
       return;
@@ -70,7 +70,7 @@ class BaseDelete extends L.Handler {
     this.fire('disabled', { handler: this.type });
   }
 
-  /** Add listener hooks to this handler **/
+  /** Add listener hooks to this handler */
   addHooks(): void {
     if (this._map) {
       this._map.getContainer().focus();
@@ -86,7 +86,7 @@ class BaseDelete extends L.Handler {
     }
   }
 
-  /** Remove listener hooks from this handler **/
+  /** Remove listener hooks from this handler */
   removeHooks(): void {
     if (this._map) {
       this._deletableLayers.eachLayer(this._disableLayerDelete, this);
@@ -99,7 +99,7 @@ class BaseDelete extends L.Handler {
     }
   }
 
-  /** Rever the deleted layers back to their prior state **/
+  /** Rever the deleted layers back to their prior state */
   revertLayers(): void {
     // Iterate of the deleted layers and add them back into the featureGroup
     this._deletedLayers.eachLayer(function revertLayer(layer) {
@@ -108,12 +108,12 @@ class BaseDelete extends L.Handler {
     }, this);
   }
 
-  /** Save deleted layers **/
+  /** Save deleted layers */
   save(): void {
     this._map.fire(Event.DELETED, { layers: this._deletedLayers });
   }
 
-  /** Remove all layers that can be deleted **/
+  /** Remove all layers that can be deleted */
   removeAllLayers(): void {
     // Iterate over layers and remove them
     this._deletableLayers.eachLayer(function removeLayer(layer) {
@@ -159,5 +159,5 @@ class BaseDelete extends L.Handler {
   }
 }
 
-const Delete = BaseDelete.extend({includes: L.Evented.prototype});
+const Delete = BaseDelete.include(L.Evented.prototype);
 export default Delete;

@@ -249,5 +249,5 @@ var BaseToolbar = function (_L$Class) {
   return BaseToolbar;
 }(_leaflet2.default.Class);
 
-var Toolbar = BaseToolbar.extend({ includes: _leaflet2.default.Evented.prototype });
+var Toolbar = BaseToolbar.include(_leaflet2.default.Evented.prototype);
 exports.default = Toolbar;

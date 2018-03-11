@@ -32,7 +32,7 @@ class TouchExtend extends L.Handler {
     this._pane = map._panes.overlayPane;
   }
 
-  /** Adds dom listener events to the map container **/
+  /** Adds dom listener events to the map container */
   addHooks(): void {
     L.DomEvent.on(this._container, 'touchstart', this._onTouchStart, this);
     L.DomEvent.on(this._container, 'touchend', this._onTouchEnd, this);
@@ -49,7 +49,7 @@ class TouchExtend extends L.Handler {
     }
   }
 
-  /** Removes dom listener events from the map container **/
+  /** Removes dom listener events from the map container */
   removeHooks(): void {
     L.DomEvent.off(this._container, 'touchstart', this._onTouchStart);
     L.DomEvent.off(this._container, 'touchend', this._onTouchEnd);
@@ -97,7 +97,7 @@ class TouchExtend extends L.Handler {
     });
   }
 
-  /** Borrowed from Leaflet and modified for bool ops **/
+  /** Borrowed from Leaflet and modified for bool ops */
   static _filterClick(event: T_EVENT): boolean {
     const timeStamp = (event.timeStamp || event.originalEvent.timeStamp);
     const elapsed = L.DomEvent._lastClick && (timeStamp - L.DomEvent._lastClick);
@@ -202,7 +202,7 @@ export class TouchMarker extends L.Marker {
 
   /** This is an exact copy of https://github.com/Leaflet/Leaflet/blob/v0.7/src/layer/marker/Marker.js
    * with the addition of the touch events
-   **/
+   */
   _initInteractionLegacy(): void {
     if (!this.options.clickable)
       return;

@@ -58,7 +58,7 @@ class BaseEdit extends L.Handler {
     this.type = BaseEdit.TYPE;
   }
 
-  /** Enable the edit toolbar **/
+  /** Enable the edit toolbar */
   enable(): void {
     if (this._enabled || !this._hasAvailableLayers())
       return;
@@ -73,7 +73,7 @@ class BaseEdit extends L.Handler {
       .on('layerremove', this._disableLayerEdit, this);
   }
 
-  /** Disable the edit toolbar **/
+  /** Disable the edit toolbar */
   disable(): void {
     if (!this._enabled)
       return;
@@ -86,7 +86,7 @@ class BaseEdit extends L.Handler {
     this.fire('disabled', { handler: this.type });
   }
 
-  /** Add listener hooks for this handler **/
+  /** Add listener hooks for this handler */
   addHooks(): void {
     if (this._map) {
       this._map.getContainer().focus();
@@ -112,7 +112,7 @@ class BaseEdit extends L.Handler {
     }
   }
 
-  /** Remove listener hooks for this handler **/
+  /** Remove listener hooks for this handler */
   removeHooks(): void {
     if (this._map) {
       // Clean up selected layers.
@@ -132,7 +132,7 @@ class BaseEdit extends L.Handler {
     }
   }
 
-  /** Revert each layer's geometry changes **/
+  /** Revert each layer's geometry changes */
   revertLayers(): void {
     this._featureGroup.eachLayer(function revertLayer(layer) {
       this._revertLayer(layer);
@@ -304,5 +304,5 @@ class BaseEdit extends L.Handler {
   }
 }
 
-const Edit = BaseEdit.extend({includes: L.Evented.prototype});
+const Edit = BaseEdit.include(L.Evented.prototype);
 export default Edit;

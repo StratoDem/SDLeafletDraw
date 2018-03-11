@@ -68,7 +68,7 @@ export default class SimpleShape extends L.Handler {
     });
   }
 
-  /** Add listener hooks to this handler **/
+  /** Add listener hooks to this handler */
   addHooks(): void {
     const shape = this._shape;
     if (this._shape._map) {
@@ -85,7 +85,7 @@ export default class SimpleShape extends L.Handler {
     }
   }
 
-  /** Remove listener hooks from this handler **/
+  /** Remove listener hooks from this handler */
   removeHooks(): void {
     const shape = this._shape;
 
@@ -104,7 +104,7 @@ export default class SimpleShape extends L.Handler {
     this._map = null;
   }
 
-  /** Remove the edit markers from this layer **/
+  /** Remove the edit markers from this layer */
   updateMarkers(): void {
     this._markerGroup.clearLayers();
     this._initMarkers();

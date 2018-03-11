@@ -28,7 +28,7 @@ class BaseToolbar extends L.Class {
     return this._activeMode !== null;
   }
 
-  /** Disables the toolbar **/
+  /** Disables the toolbar */
   disable(): void {
     if (!this.enabled())
       return;
@@ -37,7 +37,7 @@ class BaseToolbar extends L.Class {
     this._activeMode.handler.disable();
   }
 
-  /** Adds the toolbar to the map and returns the DOM element **/
+  /** Adds the toolbar to the map and returns the DOM element */
   addToolbar(map: L.Map): L.DomUtil | null {
     const container = L.DomUtil.create('div', 'leaflet-draw-section');
     let buttonIndex = 0;
@@ -73,7 +73,7 @@ class BaseToolbar extends L.Class {
     return container;
   }
 
-  /** Removes the toolbar and drops the handler event listeners **/
+  /** Removes the toolbar and drops the handler event listeners */
   removeToolbar(): void {
     // Dispose each handler
     Object.keys(this._modes).forEach((k: string) => {
@@ -244,5 +244,5 @@ class BaseToolbar extends L.Class {
   }
 }
 
-const Toolbar = BaseToolbar.extend({includes: L.Evented.prototype});
+const Toolbar = BaseToolbar.include(L.Evented.prototype);
 export default Toolbar;

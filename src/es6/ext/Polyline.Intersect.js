@@ -18,7 +18,7 @@ L.Polyline.include({
   /**
    * Check to see if this polyline has any linesegments that intersect.
    * NOTE: does not support detecting intersection for degenerate cases.
-   **/
+   */
   intersects(): boolean {
     if (this._tooFewPointsForIntersection()) {
       return false;

@@ -14,7 +14,7 @@ import { TouchMarker } from '../../ext/index';
 import drawLocal from '../../draw';
 import Event from '../../Event';
 
-/** Poly **/
+/** Poly */
 export class Poly extends L.Handler {
   static options = {};
 
@@ -30,7 +30,7 @@ export class Poly extends L.Handler {
     this._poly.on('revert-edited', this._updateLatLngs, this);
   }
 
-  /** Compatibility method to normalize Poly* objects between 0.7.x and 1.0+ **/
+  /** Compatibility method to normalize Poly* objects between 0.7.x and 1.0+ */
   _defaultShape(): L.Polyline {
     if (!L.Polyline._flat)
       return this._poly._latlngs;
@@ -44,7 +44,7 @@ export class Poly extends L.Handler {
     this._verticesHandlers.forEach(vh => callback(vh));
   }
 
-  /** Add listener hooks to this handler **/
+  /** Add listener hooks to this handler */
   addHooks(): void {
     this._initHandlers();
     this._eachVertexHandler((handler) => {
@@ -52,14 +52,14 @@ export class Poly extends L.Handler {
     });
   }
 
-  /** Remove listener hooks from this handler **/
+  /** Remove listener hooks from this handler */
   removeHooks(): void {
     this._eachVertexHandler((handler) => {
       handler.removeHooks();
     });
   }
 
-  /** Fire and update for each vertex handler **/
+  /** Fire and update for each vertex handler */
   updateMarkers(): void {
     this._eachVertexHandler((handler) => {
       handler.updateMarkers();
@@ -80,7 +80,7 @@ export class Poly extends L.Handler {
 }
 
 
-/** PolyVerticesEdit **/
+/** PolyVerticesEdit */
 type T_ORIGINAL_EVENT = {
   clientX: number,
   clientY: number,
@@ -140,7 +140,7 @@ export class PolyVerticesEdit extends L.Handler {
     });
   }
 
-  /** Compatibility method to normalize Poly* objects between 0.7.x and 1.0+ **/
+  /** Compatibility method to normalize Poly* objects between 0.7.x and 1.0+ */
   _defaultShape(): Array<L.LatLng> {
     if (typeof L.LineUtil._flat === 'undefined')
       return this._latlngs;
@@ -150,7 +150,7 @@ export class PolyVerticesEdit extends L.Handler {
       : this._latlngs[0];
   }
 
-  /** Add listener hooks to this handler **/
+  /** Add listener hooks to this handler */
   addHooks(): void {
     const poly = this._poly;
 
@@ -173,7 +173,7 @@ export class PolyVerticesEdit extends L.Handler {
     }
   }
 
-  /** Remove listener hooks from this handler **/
+  /** Remove listener hooks from this handler */
   removeHooks(): void {
     const poly = this._poly;
 
@@ -186,7 +186,7 @@ export class PolyVerticesEdit extends L.Handler {
     }
   }
 
-  /** Clear markers and update their location **/
+  /** Clear markers and update their location */
   updateMarkers(): void {
     this._markerGroup.clearLayers();
     this._initMarkers();

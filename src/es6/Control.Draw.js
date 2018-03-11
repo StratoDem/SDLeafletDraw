@@ -53,10 +53,10 @@ export default class DrawControl extends L.Control {
       // Listen for when toolbar is enabled
       this._toolbars[EditToolbar.TYPE].on('enable', this._toolbarEnabled, this);
     }
-    L.toolbar = this;   // set global var for editing the toolbar
+    L.toolbar = this; // set global var for editing the toolbar
   }
 
-  /** Adds the toolbar container to the map **/
+  /** Adds the toolbar container to the map */
   onAdd(map: L.Map): Toolbar {
     const container = L.DomUtil.create('div', 'leaflet-draw');
     let addedTopClass = false;
@@ -81,14 +81,14 @@ export default class DrawControl extends L.Control {
     return container;
   }
 
-  /** Removes the toolbars from the map toolbar container **/
+  /** Removes the toolbars from the map toolbar container */
   onRemove(): void {
     Object.keys(this._toolbars).forEach((k: string) => {
       this._toolbars[k].removeToolbar();
     });
   }
 
-  /** Sets options to all toolbar instances **/
+  /** Sets options to all toolbar instances */
   setDrawingOptions(options: T_CD_OPTIONS): void {
     Object.keys(this._toolbars).forEach((k: string) => {
       if (this._toolbars[k] instanceof DrawToolbar)

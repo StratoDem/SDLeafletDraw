@@ -12,7 +12,7 @@ import L from 'leaflet';
 
 
 L.Polygon.include({
-  /** Checks a polygon for any intersecting line segments. Ignores holes. **/
+  /** Checks a polygon for any intersecting line segments. Ignores holes. */
   intersects(): boolean {
     if (this._tooFewPointsForIntersection())
       return false;

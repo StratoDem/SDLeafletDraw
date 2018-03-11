@@ -31,7 +31,7 @@ export default class Tooltip extends L.Class {
     this._map.on('mouseout', this._onMouseOut, this);
   }
 
-  /** Remove Tooltip DOM and unbind events **/
+  /** Remove Tooltip DOM and unbind events */
   dispose(): void {
     this._map.off('mouseout', this._onMouseOut, this);
 
@@ -41,7 +41,7 @@ export default class Tooltip extends L.Class {
     }
   }
 
-  /** **/
+  /** */
   updateContent(labelText: {text: string, subtext?: string}): Object {
     if (!this._container)
       return this;
@@ -76,7 +76,7 @@ export default class Tooltip extends L.Class {
     return this;
   }
 
-  /** Changes the location of the tooltip **/
+  /** Changes the location of the tooltip */
   updatePosition(latlng: L.LatLng): Object {
     const pos = this._map.latLngToLayerPoint(latlng);
     const tooltipContainer = this._container;
@@ -90,14 +90,14 @@ export default class Tooltip extends L.Class {
     return this;
   }
 
-  /** Apply error class to Tooltip **/
+  /** Apply error class to Tooltip */
   showAsError(): Object {
     if (this._container)
       L.DomUtil.addClass(this._container, 'leaflet-error-draw-tooltip');
     return this;
   }
 
-  /** Removes the error class from the tooltip **/
+  /** Removes the error class from the tooltip */
   removeError(): Object {
     if (this._container)
       L.DomUtil.removeClass(this._container, 'leaflet-error-draw-tooltip');

@@ -46,7 +46,7 @@ const GeometryUtil = L.extend(L.GeometryUtil || {}, {
     return Math.abs(area);
   },
 
-  /** Returns n in specified number format (if defined) and precision **/
+  /** Returns n in specified number format (if defined) and precision */
   formattedNumber(n: number, precision: number): string {
     let formatted = n.toFixed(precision);
     const format = drawLocal.format && drawLocal.format.numeric;

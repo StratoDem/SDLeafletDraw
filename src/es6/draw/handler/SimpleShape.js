@@ -40,7 +40,7 @@ export default class SimpleShape extends Feature {
     super.initialize(map, {repeatMode: false, ...options});
   }
 
-  /** Add listener hooks to this handler **/
+  /** Add listener hooks to this handler */
   addHooks(): void {
     super.addHooks();
     if (this._map) {
@@ -63,7 +63,7 @@ export default class SimpleShape extends Feature {
     }
   }
 
-  /** Remove listener hooks from this handler **/
+  /** Remove listener hooks from this handler */
   removeHooks(): void {
     super.removeHooks();
     if (this._map) {

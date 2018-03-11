@@ -23,7 +23,7 @@ export default class Marker extends L.Handler {
     L.setOptions(this, options);
   }
 
-  /** Add listener hooks to this handler **/
+  /** Add listener hooks to this handler */
   addHooks(): void {
     const marker = this._marker;
 
@@ -32,7 +32,7 @@ export default class Marker extends L.Handler {
     this._toggleMarkerHighlight();
   }
 
-  /** Remove listener hooks from this handler **/
+  /** Remove listener hooks from this handler */
   removeHooks(): void {
     const marker = this._marker;
 

@@ -80,7 +80,7 @@ class EditToolbar extends Toolbar {
     this._selectedFeatureCount = 0;
   }
 
-  /** Get mode handlers information **/
+  /** Get mode handlers information */
   getModeHandlers(map: L.Map): [
     {enabled: any, handler: Edit, title: string},
     {enabled: any, handler: Delete, title: string}] {
@@ -103,7 +103,7 @@ class EditToolbar extends Toolbar {
     ];
   }
 
-  /** Get actions information **/
+  /** Get actions information */
   getActions(): [T_ACTION, T_ACTION] {
     return [
       {
@@ -121,7 +121,7 @@ class EditToolbar extends Toolbar {
     ];
   }
 
-  /** Adds the toolbar to the map **/
+  /** Adds the toolbar to the map */
   addToolbar(map: L.Map): L.DomUtil {
     const container = super.addToolbar(map);
     this._checkDisabled();
@@ -137,7 +137,7 @@ class EditToolbar extends Toolbar {
     super.removeToolbar();
   }
 
-  /** Disables the toolbar **/
+  /** Disables the toolbar */
   disable(): void {
     if (!this.enabled())
       return;

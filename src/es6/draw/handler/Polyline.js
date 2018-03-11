@@ -114,7 +114,7 @@ export default class Polyline extends Feature {
     });
   }
 
-  /** Add listener hooks to this handler **/
+  /** Add listener hooks to this handler */
   addHooks(): void {
     super.addHooks();
     if (this._map) {
@@ -160,7 +160,7 @@ export default class Polyline extends Feature {
     }
   }
 
-  /** Remove listener hooks from this handler **/
+  /** Remove listener hooks from this handler */
   removeHooks(): void {
     super.removeHooks();
 
@@ -196,7 +196,7 @@ export default class Polyline extends Feature {
       .off('click', this._onTouch, this);
   }
 
-  /** Remove the last vertex from the polyline, removes from map if only one point exists. **/
+  /** Remove the last vertex from the polyline, removes from map if only one point exists. */
   deleteLastVertex(): void {
     if (this._markers.length <= 1)
       return;
@@ -215,7 +215,7 @@ export default class Polyline extends Feature {
     this._vertexChanged(latlng, false);
   }
 
-  /** Add a vertex to the end of the polyline **/
+  /** Add a vertex to the end of the polyline */
   addVertex(latlng: L.LatLng): void {
     const markersLength = this._markers.length;
     // markersLength must be greater than or equal to 2 before intersections can occur
@@ -238,7 +238,7 @@ export default class Polyline extends Feature {
     this._vertexChanged(latlng, true);
   }
 
-  /** Closes the polyline between the first and last points **/
+  /** Closes the polyline between the first and last points */
   completeShape(): void {
     if (this._markers.length <= 1)
       return;
@@ -265,7 +265,7 @@ export default class Polyline extends Feature {
       this.enable();
   }
 
-  /** Verify that the shape is valid when the user tries to finish it **/
+  /** Verify that the shape is valid when the user tries to finish it */
   // eslint-disable-next-line
   _shapeIsValid(): boolean {
     return true;
@@ -345,7 +345,7 @@ export default class Polyline extends Feature {
     this._mouseDownOrigin = null;
   }
 
-  /** onTouch prevented by clickHandled flag because some browsers fire both click/touch events **/
+  /** onTouch prevented by clickHandled flag because some browsers fire both click/touch events */
   _onTouch(event: {originalEvent: T_ORIGINAL_EVENT}): void {
     const originalEvent = event.originalEvent;
     if (originalEvent.touches
@@ -491,7 +491,7 @@ export default class Polyline extends Feature {
     }
   }
 
-  /** Remove all child elements (guide dashes) from the guides container **/
+  /** Remove all child elements (guide dashes) from the guides container */
   _clearGuides(): void {
     if (this._guidesContainer) {
       while (this._guidesContainer.firstChild) {
@@ -601,12 +601,12 @@ export default class Polyline extends Feature {
     }
   }
 
-  /** Disable new markers temporarily to prevent duplicated touch/click events in some browsers**/
+  /** Disable new markers temporarily to prevent duplicated touch/click events in some browsers*/
   _disableNewMarkers(): void {
     this._disableMarkers = true;
   }
 
-  /** Re-enable new markers **/
+  /** Re-enable new markers */
   _enableNewMarkers(): void {
     setTimeout(() => { this._disableMarkers = false; }, 50);
   }

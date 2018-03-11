@@ -17,7 +17,7 @@ import drawLocal from '../draw';
 import { Circle, Marker, Polyline, Polygon, Rectangle } from './handler/index';
 
 
-/** TYPE DEFINITIONS **/
+/** TYPE DEFINITIONS */
 type T_ENABLED = Object;
 
 type T_OPTIONS = {
@@ -71,7 +71,7 @@ export default class DrawToolbar extends Toolbar {
     super.initialize(updatedOptions);
   }
 
-  /** Get mode handlers information **/
+  /** Get mode handlers information */
   getModeHandlers(map: L.Map): T_ARR_MH {
     return [
       {
@@ -102,7 +102,7 @@ export default class DrawToolbar extends Toolbar {
     ];
   }
 
-  /** Get action information **/
+  /** Get action information */
   getActions(handler: Object): T_ARR_ACT {
     return [
       {
@@ -128,7 +128,7 @@ export default class DrawToolbar extends Toolbar {
     ];
   }
 
-  /** Sets the options to the toolbar **/
+  /** Sets the options to the toolbar */
   setOptions(options: T_OPTIONS): void {
     L.setOptions(this, options);
 
