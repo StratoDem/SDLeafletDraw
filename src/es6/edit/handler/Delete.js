@@ -159,5 +159,5 @@ class BaseDelete extends L.Handler {
   }
 }
 
-const Delete = BaseDelete.include(L.Evented.prototype);
+const Delete = BaseDelete.extend({includes: L.Evented.prototype});
 export default Delete;

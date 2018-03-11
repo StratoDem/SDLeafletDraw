@@ -88,5 +88,5 @@ class BaseFeature extends L.Handler {
   }
 }
 
-const Feature = BaseFeature.include(L.Evented.prototype);
+const Feature = BaseFeature.extend({includes: L.Evented.prototype});
 export default Feature;

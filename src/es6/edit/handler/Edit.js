@@ -304,5 +304,5 @@ class BaseEdit extends L.Handler {
   }
 }
 
-const Edit = BaseEdit.include(L.Evented.prototype);
+const Edit = BaseEdit.extend({includes: L.Evented.prototype});
 export default Edit;

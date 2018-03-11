@@ -244,5 +244,5 @@ class BaseToolbar extends L.Class {
   }
 }
 
-const Toolbar = BaseToolbar.include(L.Evented.prototype);
+const Toolbar = BaseToolbar.extend({includes: L.Evented.prototype});
 export default Toolbar;

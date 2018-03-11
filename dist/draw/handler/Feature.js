@@ -124,5 +124,5 @@ var BaseFeature = function (_L$Handler) {
   return BaseFeature;
 }(_leaflet2.default.Handler);
 
-var Feature = BaseFeature.include(_leaflet2.default.Evented.prototype);
+var Feature = BaseFeature.extend({ includes: _leaflet2.default.Evented.prototype });
 exports.default = Feature;
