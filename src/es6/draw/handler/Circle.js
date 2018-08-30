@@ -38,7 +38,7 @@ export default class Circle extends SimpleShape {
   _initialLabelText: string;
 
   static options = DEFAULT_CIRCLE_OPTIONS;
-  static type = TYPE_CIRCLE;
+  static TYPE = TYPE_CIRCLE;
 
   initialize(map: L.Map, options: T_SIMPLESHAPE_OPTIONS): void {
     // Save the type so super can fire, need to do this as cannot do this.TYPE :(
