@@ -117,5 +117,5 @@ var Circle = function (_SimpleShape) {
 }(_SimpleShape3.default);
 
 Circle.options = DEFAULT_CIRCLE_OPTIONS;
-Circle.type = _constants.TYPE_CIRCLE;
+Circle.TYPE = _constants.TYPE_CIRCLE;
 exports.default = Circle;
