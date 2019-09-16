@@ -188,6 +188,7 @@ export default class Polyline extends Feature {
     this._clearGuides();
 
     this._map
+      .off('click', this._onClick, this)
       .off('mouseup', this._onMouseUp, this)
       .off('mousemove', this._onMouseMove, this)
       .off('zoomlevelschange', this._onZoomEnd, this)
