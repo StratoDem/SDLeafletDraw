@@ -161,7 +161,7 @@ var Polyline = function (_Feature) {
       this._clearGuides();
 
       // adds click handler to start of this line
-      this._map.off('click', this._onClick, this).off('mouseup', this._onMouseUp, this).off('mousemove', this._onMouseMove, this).off('zoomlevelschange', this._onZoomEnd, this).off('zoomend', this._onZoomEnd, this).off('touchstart', this._onTouch, this).off('click', this._onTouch, this);
+      this._map.off('mouseup', this._onMouseUp, this).off('mousemove', this._onMouseMove, this).off('zoomlevelschange', this._onZoomEnd, this).off('zoomend', this._onZoomEnd, this).off('touchstart', this._onTouch, this).off('click', this._onTouch, this);
     }
   }, {
     key: 'deleteLastVertex',
